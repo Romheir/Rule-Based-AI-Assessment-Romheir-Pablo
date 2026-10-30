@@ -98,4 +98,9 @@ print(classification_report(y, predictions_alg2, zero_division=0))
 # Generate and save Alg 2 Confusion Matrix
 cm2 = confusion_matrix(y, predictions_alg2, labels=classes)
 disp2 = ConfusionMatrixDisplay(confusion_matrix=cm2, display_labels=classes)
-disp2.plot(cmap=plt
+disp2.plot(cmap=plt.cm.Oranges)
+plt.title("Algorithm 2: Weighted Scoring System")
+plt.savefig("alg2_matrix.png", bbox_inches='tight', dpi=300)
+plt.close()
+
+print("Images 'alg1_matrix.png' and 'alg2_matrix.png' have been saved to your folder!")
